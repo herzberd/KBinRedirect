@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Kbin Redirect",
+    "version": "0.1",
+    "description": "Fixes redirects on kbin when viewing lemmy shortlinks",
+    "icons": {
+        "48": "redirect_logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://kbin.social/*"
+            ],
+            "js": [
+                "kbinredirect.js"
+            ]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "kbinredirect@herzberd.dev"
+        }
+    }
+}
